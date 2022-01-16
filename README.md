@@ -92,6 +92,7 @@ Other dedicated linters that are built-in are:
 | [pycodestyle][pcs-docs]      | `pycodestyle`  |
 | [pydocstyle][pydocstyle]     | `pydocstyle`   |
 | [Pylint][15]                 | `pylint`       |
+| [pytestcov][pytestcov]       | `pytestcov`    |
 | [Revive][14]                 | `revive`       |
 | [rflint][rflint]             | `rflint`       |
 | [robocop][robocop]           | `robocop`      |
@@ -291,3 +292,4 @@ nvim --headless --noplugin -u tests/minimal.vim -c "PlenaryBustedDirectory tests
 [rstcheck]: https://github.com/myint/rstcheck
 [rstlint]: https://github.com/twolfson/restructuredtext-lint
 [ktlint]: https://github.com/pinterest/ktlint
+[pytestcov]: https://github.com/pytest-dev/pytest-cov
