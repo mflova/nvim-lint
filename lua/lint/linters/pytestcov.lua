@@ -24,12 +24,10 @@ return {
   cmd = 'pytest',
   stdin = false,
   args = {"--cov-reset", "--cov-report=term-missing", "--cov=.", function ()
-    local git_root_dir = vim.fn.system("git rev-parse --show-toplevel"):sub(1, -2)
-    if vim.startswith(git_root_dir, 'fatal') then
-      return ''
-    else
-      return git_root_dir
-    end
+    local bufnr = vim.api.nvim_get_current_buf()
+    local str = vim.api.nvim_buf_get_name(bufnr)
+    local sep='/'
+    return str:match("(.*"..sep..")") -- Folder of the file
   end},
   append_fname = false,
   ignore_exitcode = true,
